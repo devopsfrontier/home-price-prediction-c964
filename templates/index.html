@@ -13,10 +13,10 @@
         <form action="{{ url_for('predict')}}" method="post">
             <h2>Predictive analysis</h2>
             <h3>Year</h3>
-            <input id="first" name="Year" type="number ">
-            <h3>How Many Kilometers Drived?</h3><input id="second" name="Kms_Driven" required="required">
-            <h3>How much living sqft ?</h3><br><input id="third" name="Owner" required="required">
-            <h3>What Is the Fuel type?</h3><br><input id="forth" name="Fuel_Type_Petrol" required="required">
+            <input id="first" name="yr_built" type="number ">
+            <h3>How Many Kilometers Drived?</h3><input id="second" name="yr_renovated" required="required">
+            <h3>How much living sqft ?</h3><br><input id="third" name="sqft_living" required="required">
+            <h3>What Is the Fuel type?</h3><br><input id="forth" name="sqft_lot" required="required">
             <br><br><button id="sub" type="submit ">Calculate the Selling Price</button>
             <br>
 

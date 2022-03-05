@@ -16,10 +16,10 @@ standard_to = StandardScaler()
 @app.route("/predict", methods=['POST'])
 def predict():
     if request.method == 'POST':
-        Year = int(request.form['yr_built'])
-        Kms_Driven=int(request.form['yr_renovated'])
-        Owner=int(request.form['sqft_living'])
-        Fuel_Type_Petrol=int(request.form['sqft_lot'])
+        yr_built = int(request.form['yr_built'])
+        yr_renovated=int(request.form['yr_renovated'])
+        sqft_living=int(request.form['sqft_living'])
+        sqft_lot=int(request.form['sqft_lot'])
 #
 #        Seller_Type_Individual=request.form['Seller_Type_Individual']
 #        if(Seller_Type_Individual=='Individual'):
@@ -32,7 +32,7 @@ def predict():
 #        else:
 #            Transmission_Mannual=0
 
-        prediction=model.predict([[Kms_Driven,Owner,Year,Fuel_Type_Petrol]])
+        prediction=model.predict([[yr_built, yr_renovated, sqft_living, sqft_lot]])
         output=round(prediction[0],2)
  #       if output<0:
  #           return render_template('index.html',prediction_texts="Sorry you cannot sell this car")
