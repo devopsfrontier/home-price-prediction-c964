@@ -19,7 +19,7 @@ def predict():
         Year = int(request.form['yr_built'])
         Kms_Driven=int(request.form['yr_renovated'])
         Owner=int(request.form['sqft_living'])
-        Fuel_Type_Petrol=request.form['sqft_lot']
+        Fuel_Type_Petrol=int(request.form['sqft_lot'])
 #
 #        Seller_Type_Individual=request.form['Seller_Type_Individual']
 #        if(Seller_Type_Individual=='Individual'):
