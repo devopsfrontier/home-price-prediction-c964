@@ -20,18 +20,18 @@ def predict():
         Kms_Driven=int(request.form['yr_renovated'])
         Owner=int(request.form['sqft_living'])
         Fuel_Type_Petrol=request.form['sqft_lot']
-        /*
-        Seller_Type_Individual=request.form['Seller_Type_Individual']
-        if(Seller_Type_Individual=='Individual'):
-            Seller_Type_Individual=1
-        else:
-            Seller_Type_Individual=0	
-        Transmission_Mannual=request.form['Transmission_Mannual']
-        if(Transmission_Mannual=='Mannual'):
-            Transmission_Mannual=1
-        else:
-            Transmission_Mannual=0
-            */
+#
+#        Seller_Type_Individual=request.form['Seller_Type_Individual']
+#        if(Seller_Type_Individual=='Individual'):
+#            Seller_Type_Individual=1
+#        else:
+#            Seller_Type_Individual=0	
+#        Transmission_Mannual=request.form['Transmission_Mannual']
+#        if(Transmission_Mannual=='Mannual'):
+#            Transmission_Mannual=1
+#        else:
+#            Transmission_Mannual=0
+
         prediction=model.predict([[Kms_Driven,Owner,Year,Fuel_Type_Petrol]])
         output=round(prediction[0],2)
         if output<0:
